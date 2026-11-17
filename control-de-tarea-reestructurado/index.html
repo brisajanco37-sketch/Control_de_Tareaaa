@@ -76,18 +76,47 @@
     <img src="/img/logo-control-de-tarea.jpg" alt="Control de Tarea" class="modal-logo">
     <span class="eyebrow">PLATAFORMA EDUCATIVA</span>
     <h2 id="auth-title">Ingresar a Control de Tarea</h2>
-    <p id="auth-description">Ingresá con tu DNI y contraseña o creá una cuenta.</p>
+    <p id="auth-description">Ingresá con tu correo electrónico y contraseña o creá una cuenta.</p>
     <div class="auth-tabs"><button type="button" class="auth-tab active" data-auth-mode="login">Iniciar sesión</button><button type="button" class="auth-tab" data-auth-mode="register">Registrarme</button></div>
     <form id="auth-form">
-      <label>Nombre y apellido <input id="auth-name" maxlength="60" placeholder="Ej. Leonel Alamo"></label>
-      <label>DNI <input id="auth-dni" inputmode="numeric" autocomplete="username" maxlength="8" required placeholder="Ingresá tu DNI"></label>
-      <label>Contraseña <input id="auth-password" type="password" autocomplete="current-password" minlength="6" required placeholder="Ingresá tu contraseña"></label>
-      <label id="role-field">Ingresar como
-        <select id="auth-role" required>
+      <label id="name-field">Nombre y apellido
+        <input id="auth-name" maxlength="60" autocomplete="name" placeholder="Ej. Leonel Alamo">
+      </label>
+      <label>Correo electrónico
+        <input id="auth-email" type="email" maxlength="120" autocomplete="email" required placeholder="ejemplo@correo.com">
+      </label>
+      <label id="dni-field">DNI
+        <input id="auth-dni" inputmode="numeric" autocomplete="off" maxlength="8" placeholder="Ingresá tu DNI">
+      </label>
+      <label>Contraseña
+        <input id="auth-password" type="password" autocomplete="current-password" minlength="6" required placeholder="Ingresá tu contraseña">
+      </label>
+      <label id="role-field">Tipo de cuenta
+        <select id="auth-role">
           <option value="student">Alumno</option>
           <option value="teacher">Profesor</option>
         </select>
-        <small class="feedback">El perfil elegido debe coincidir con el rol autorizado de tu cuenta.</small>
+      </label>
+      <label id="year-field">Año
+        <select id="auth-year">
+          <option value="">Seleccioná el año</option>
+          <option value="1° año">1° año</option>
+          <option value="2° año">2° año</option>
+          <option value="3° año">3° año</option>
+          <option value="4° año">4° año</option>
+          <option value="5° año">5° año</option>
+          <option value="6° año">6° año</option>
+        </select>
+      </label>
+      <label id="division-field">División
+        <select id="auth-division">
+          <option value="">Seleccioná la división</option>
+          <option value="1° división">1° división</option>
+          <option value="2° división">2° división</option>
+        </select>
+      </label>
+      <label id="code-field">Código de autorización docente
+        <input id="auth-code" type="password" autocomplete="off" placeholder="Ingresá el código docente">
       </label>
       <button class="primary-btn full-btn" id="auth-submit" type="submit">Ingresar al sistema →</button>
     </form>

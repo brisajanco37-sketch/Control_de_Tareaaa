@@ -1,7 +1,3 @@
--- CONTROL DE TAREA | Esquema inicial para Supabase
--- Ejecutar completo en Supabase > SQL Editor > New query.
--- IMPORTANTE: el trigger asigna siempre el rol alumno. Nunca confiar en un rol
--- enviado por el formulario del navegador.
 
 create extension if not exists pgcrypto;
 

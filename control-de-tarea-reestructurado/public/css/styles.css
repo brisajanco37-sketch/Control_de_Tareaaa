@@ -12,3 +12,18 @@
 :root[data-theme="dark"] .theme-toggle{background:#14263c;color:#f0d99f;border-color:#43536a}
 :root[data-theme="dark"] .footer{color:#71849a}
 @media(max-width:650px){.theme-toggle span{display:none}.theme-toggle{padding:8px}.top-actions{gap:6px}}
+
+
+
+/* Permitir desplazamiento en el formulario de registro */
+.modal-backdrop {
+  overflow-y: auto;
+  align-items: start;
+}
+
+.auth-modal {
+  max-height: calc(100vh - 36px);
+  overflow-y: auto;
+  margin: auto 0;
+  overscroll-behavior: contain;
+}

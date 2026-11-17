@@ -1,0 +1,30 @@
+CONTROL DE TAREA - ADJUNTOS
+
+Archivos incluidos:
+- src/api.js: funciones de Supabase Storage y metadatos de archivos.
+- src/main.js: botones para descargar materiales y subir entregas.
+- crear.html: formulario docente con selector de archivo.
+- supabase-storage.sql: columnas, bucket privado y políticas de acceso.
+
+INSTALACIÓN
+1. Hacé una copia de seguridad de estos archivos de tu proyecto.
+2. Reemplazá src/api.js y src/main.js por los archivos de esta carpeta.
+3. Reemplazá crear.html por el archivo de esta carpeta.
+4. En Supabase, abrí SQL Editor y ejecutá todo el contenido de supabase-storage.sql.
+5. Subí los cambios a GitHub para que Vercel despliegue la actualización.
+
+USO
+- El profesor puede adjuntar un material al crear una actividad.
+- El alumno puede descargar ese material desde la tarjeta de la actividad.
+- Al tocar “Entregar tarea”, el alumno selecciona el archivo de su trabajo.
+- El profesor encuentra el archivo de cada entrega en la sección “Entregas recibidas”.
+
+FORMATOS: PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, TXT, JPG, JPEG, PNG, WEBP y ZIP.
+LÍMITE: 10 MB por archivo con Supabase. En modo de demostración local el límite es 1 MB.
+
+IMPORTANTE
+- El bucket se llama exactamente archivos-tareas y queda privado.
+- El SQL presupone que ya existen public.profiles, public.tasks y public.deliveries,
+  y que deliveries contiene student_id y task_id, tal como indica el código actual.
+- Las tareas antiguas conservarán su funcionamiento; los archivos nuevos quedarán
+  vinculados a las cuentas y cursos correspondientes.
